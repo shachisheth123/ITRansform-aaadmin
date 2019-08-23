@@ -1,0 +1,45 @@
+
+<div class="wrapper">
+    <!-- <h2 class="course-head">Courses to get you started</h2> -->
+    <div class="course-box">
+        <ul class="course-list">
+            <li *ngIf="course" class="course-name">
+                <h2>{{course.courseName}}</h2>
+            </li>
+            <li class="chap-box">
+                <div class="courseimg">
+                    <img src="{{course.courseImage}}" alt="">
+                    
+                    <div *ngIf=flag ><button class="btn btn-primary enroll" routerLink="/signup/{{course.courseId}}">Enroll Now</button></div>
+                    <div *ngIf=!flag><button class ="btn btn-primary enroll" (click)="addCourse(course.courseId)">Add Course</button></div>                    
+                </div>
+                <div class="coursed">
+                        <div id="accordion">
+                                <div  *ngFor="let chapter of course.courseChapter; let i=index" class="chap">
+                                    <div  id="heading{{i}}" class="heading">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link btn-chap" data-toggle="collapse" [attr.data-target]="'#collapse'+i" aria-expanded="true" [attr.aria-controls]="'collapse'+i">
+                                                Chap{{i+1}}:&nbsp;{{chapter.chapterName}}
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    
+                                    <div id="collapse{{i}}" class="collapse show" [attr.aria-labelledby]="'heading'+i" data-parent="#accordion">
+                                        <div class="modbox">
+                                            <ul *ngFor="let module of course.courseChapter[i].chapterModule; let j=index">
+                                                <li class="modulelist">
+                                                    <p class="btn-module" id="tick" >
+                                                        {{module.moduleName}}
+                                                    </p>
+                                                    <div *ngIf="module.complete" class="fa fa-check tick"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+            </li>
+        </ul>
+</div>
+</div>

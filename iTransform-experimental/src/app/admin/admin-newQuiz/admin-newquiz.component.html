@@ -1,0 +1,68 @@
+<div class="wrapper">
+    <div id="login-page">
+        <div class="form-box">
+            <form (ngSubmit)="addQuiz()" [formGroup]="adminquizform">
+
+                <div class="col-xs-12">
+                    <div class="col-md-12">
+
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="question">Questiom</label>
+                            <div class="col-md-5">
+
+                                <input id="question" type="text" name="question" formControlName="question"
+                                    placeholder="Question">
+                                <div class="text-danger"
+                                    [class.d-none]="group.controls.question.valid || group.controls.question.untouched">
+                                    Question is required</div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="option1">Option 1</label>
+                            <div class="col-md-5">
+
+                                <input id="option1" type="radio" name="option1" formControlName="option1">
+
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="option2">Option 2</label>
+                                <div class="col-md-5">
+
+                                    <input id="option2" type="radio" name="option1" formControlName="option2">
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="option1">Option 3</label>
+                                <div class="col-md-5">
+
+                                    <input id="option3" type="radio" name="option1" formControlName="option3">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="option4">Option 4</label>
+                                <div class="col-md-5">
+
+                                    <input id="option4" type="radio" name="option1" formControlName="option4">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="button" routerLink="/addchapter" class="btn btn-social" (click)="addQuiz()"
+                        value="Submit" />
+            </form>
+        </div>
+    </div>
+</div>

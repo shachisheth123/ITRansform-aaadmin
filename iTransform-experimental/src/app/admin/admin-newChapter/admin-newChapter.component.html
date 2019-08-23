@@ -1,0 +1,42 @@
+<div class="wrapper">
+    <div id="addchapter-page">
+        <div class="form-box">
+            <form (ngSubmit)="addNewChapter()" [formGroup]="adminnewchapterform">
+
+                <div class="col-xs-12">
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                                <label class="col-md-4 control-label" for="chapterName">Chapter Name</label>
+                            <input type="text" formControlName="chapterName" class="form-control box1"
+                                placeholder="Chapter Name" id="chapterName" name="chapterName"
+                                [class.is-invalid]="chapterName.touched && chapterName.invalid" required />
+                            <div class="text-danger" [class.d-none]="chapterName.valid || chapterName.untouched">Chapter
+                                Name is required</div>
+                        </div>
+
+                        <div class="form-group">
+                                <label class="col-md-4 control-label" for="moduleName">Module Name</label>
+                            <input type="text" formControlName="moduleName" class="form-control box1"
+                                placeholder="Module Name" id="moduleName" name="moduleName"
+                                [class.is-invalid]="moduleName.touched && moduleName.invalid" required />
+                            <div class="text-danger" [class.d-none]="moduleName.valid || moduleName.untouched">Module
+                                Name is required</div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Button -->
+
+                <input type="button" routerLink="/addmodule" class="btn btn-primary" (click)="addNewChapter()"
+                    value="Add" /> &nbsp;
+
+                    <input type="button" routerLink="/addmodule" class="btn btn-primary" (click)="updatechapter()"
+                    value="Update" />
+
+            </form>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<header>
+  <nav class="navbar navbar-expand-sm   ">
+    <a class=" itransform-logo" routerLink="">ITransform</a>
+    <div class="nav-box">
+      <ul class="navbar-nav itransform-nav">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="welcomecourse" id="coursebtn">All Courses</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" id="loginbtn" >Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="signup" id="signupbtn" >Signup</a>
+        </li>
+        <li *ngIf="user" class="nav-item dp">
+          <!-- <a class="nav-link">{{user.userName}}</a> -->
+          <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                {{user.userName}}
+              </button>
+              <div class="dropdown-menu" >
+                <a class="dropdown-item" routerLink="/courses">My Courses</a>
+                <br>
+                <a class="dropdown-item"(click)="logout()" routerLink="/logout">logout</a>
+                
+              </div>
+            </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<router-outlet></router-outlet>
+

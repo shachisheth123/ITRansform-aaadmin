@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <h2 class="course-head">My Courses</h2>
+    <div class="container course-box">
+        <ul class="course-list">
+            <li *ngFor="let c of courses;let i=index" class="course-card">
+                <a routerLink="/chapters/{{c.courseId}}" class="courselink">
+                    <img src="{{c.courseImage}}" alt="" width="200px" height="100px">
+                    <span class="course-name">{{c.courseName}}</span>
+
+                    <div *ngIf="!resume == 0">
+                        <input type="button" class="btn btn-primary" (click)="resumebtn()" name="resume" value="resume">
+                    </div>
+                </a>
+
+            </li>
+        </ul>
+    </div>
+
+</div>

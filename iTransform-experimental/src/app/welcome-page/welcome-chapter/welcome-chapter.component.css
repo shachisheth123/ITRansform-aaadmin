@@ -1,0 +1,116 @@
+
+li {
+    list-style-type: none;
+}
+
+.course-head {
+    background: linear-gradient(220deg,#EC5252 -10%,#6E1A52 70%);
+    padding: 21px 0 21px 125px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+
+.wrapper {
+    padding-top: 60px;
+}
+
+.course-list img {
+    transition: all .5s;
+}
+
+.courselink:hover {
+    text-decoration: none;
+}
+
+.courselink {
+    display: inline-block;
+}
+
+.course-list {
+    padding-left: 0;
+    margin-top: 4px;
+    background: white;
+}
+
+.course-name {
+    display: block;
+    width: 100%;
+    padding: 35px 62px;
+    background: #505763;
+}
+
+.course-name h2 {
+    display: block;
+    font-weight: 600;
+    font-size: 35px;
+    font-family: "Playfair Display", Georgia, serif;
+    color: white;
+}
+
+.courseimg {
+    width: 20%;
+    text-align: center;
+}
+
+.enroll{
+    margin-top: 20px;
+}
+
+.courseimg img {
+    width: 100%;
+}
+
+.chap-box {
+    display: flex;
+    padding: 20px 64px;
+}
+
+.coursed {
+    width: 80%;
+    padding: 0 40px;
+}
+
+.heading {
+    background: #f9f9f9;
+    border: solid 1px #e8e9eb;
+}
+
+.heading button {
+    color: #505763;
+    font-weight: 700;
+}
+
+.modbox {
+    border: solid 1px #e8e9eb;
+    background: white;
+}
+
+.modbox ul {
+    border-left: solid 1px #e8e9eb;
+    border-right: solid 1px #e8e9eb;
+    border-bottom: solid 1px #e8e9eb;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.heading h5 {
+    font-size: 45px;
+}
+
+
+
+.modulelist p {
+    margin: 0;
+    color: black;
+}
+
+.chap {
+    margin-bottom: 10px;
+}
+
+/* .course-list li {
+    margin-right: 20px;
+    box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+} */

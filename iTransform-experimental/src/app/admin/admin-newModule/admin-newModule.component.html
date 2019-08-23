@@ -1,0 +1,96 @@
+<div class="wrapper">
+    <div id="addmodule-page">
+        <div class="form-box">
+            <form (ngClick)="addNewModule()" [formGroup]="adminModuleForm" >
+
+                <div class="col-xs-12">
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="title">Title</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control title" placeholder="Title" formControlName="title"
+                                    id="tilte">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.title.valid || group.controls.title.untouched">
+                                Title is required</div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="description">Description</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control description" placeholder="Description"
+                                    name="description" id="description">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.description.valid || group.controls.description.untouched">
+                                Description is required</div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="subtitle">Sub Title</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control subtitle" placeholder="Sub Title" name="subtitle"
+                                    id="subtitle">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.subtitle.valid || group.controls.subtitle.untouched">
+                                Sub Title is required</div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="subdescription">Sub Description</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control subdescription" placeholder="Sub Description"
+                                    name="subdescription" id="subdescription">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.subdescription.valid || group.controls.subdescription.untouched">
+                                Sub Description is required</div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="codesnippet">Code Snippet</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control codesnippet" placeholder="code snippet"
+                                    name="codesnippet" id="codesnippet">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.codesnippet.valid || group.controls.codesnippet.untouched">
+                                code Snippet is required</div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="youtubelink">You tube link</label>
+                            <div class="input-group control-group after-add-more">
+                                <input type="text" class="form-control youtubelink" placeholder="Youtubelink"
+                                    name="youtubelink" id="youtubelink">
+                            </div>
+                            <div class="text-danger"
+                                [class.d-none]="group.controls.youtubelink.valid || group.controls.youtubelink.untouched">
+                                Youtubelink is required</div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- Button -->
+
+                <input type="button" class="btn btn-social" routerLink="/addquiz" value="Add" (click)="addNewModule()" /> &nbsp;
+
+                
+                <input type="button" class="btn btn-social" value="Update" (click)="updateModule()" />
+
+
+            </form>
+        </div>
+    </div>
+</div>

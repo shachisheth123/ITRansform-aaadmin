@@ -1,0 +1,125 @@
+.row {
+    margin: 0;
+}
+
+.mainbox {
+    padding-top: 60px;
+
+}
+
+.sidebar-box {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    padding-top: 100px;
+    width:224px;
+    background: #f5f6f6 !important;
+    overflow-y: scroll;
+}
+
+.sideb {
+    margin-right: 20px;
+}
+
+.left-sidebar {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    top: 60px;
+    background: #f5f6f6 !important;
+}
+
+.tick {
+    color: #42c142;
+}
+
+.main-box {
+    margin-left: 224px;
+    background: #fff;
+}
+
+.course-head {
+    /* background: linear-gradient(220deg,#EC5252 -10%,#6E1A52 70%); */
+    background: #f5f6f6 !important;
+    padding: 21px 0 21px 21px;
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 29px;
+    margin-top: 20px;
+    font-weight: 600;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #0072b1;
+}
+
+
+.btn-chap {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Playfair Display", Georgia, serif;
+    text-align: left;
+    text-decoration: none;
+}
+
+.btn-module {
+    font-size: 14px;
+    font-weight: 500;
+    color : #7d7b7b;
+    font-family: "Open Sans", Arial, sans-serif;
+    text-decoration: none;
+   
+}
+
+
+.modulelist {
+    list-style-type: square;
+}
+
+.course-img {
+    width: 188px;
+}
+
+.progress-bar {
+    height: 23px;
+}
+
+.course-img img {
+    width: 100%;
+}
+
+/* .mb-0  :hover{
+
+    color: green;
+} */
+.one{
+    color:grey;
+}
+
+.completed{
+    color:green;
+}
+
+.red{
+    color: red;
+    font-weight:600;
+}
+
+.green{
+    font-weight:600;
+    color:green;
+}
+
+.Error{
+    color: red;
+}
+
+.yellow{
+
+    color: yellow;
+
+}
+
+.Ignored{
+
+    color: darkgreen;
+}

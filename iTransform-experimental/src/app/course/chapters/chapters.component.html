@@ -1,0 +1,126 @@
+<div *ngIf="course" class="mainbox">
+        <!-- <h5>course progress {{progress}}% </h5>
+            <mat-progress-bar mode="determinate" value="{{progress}}" class="progress-bar"></mat-progress-bar> -->
+    
+        <div class="row sideb">
+            <div class="col-sm-2  left-sidebar">
+                <div class="sidebar-box">
+                    <div class="space-box">
+                        <figure class="course-img">
+                            <img src="{{course.courseImage}}" alt="">
+                        </figure>
+                    </div>
+                    <nav class="sidebar">
+                        <div class="list-group">
+                            <div id="accordion">
+    
+                                <div *ngFor="let chapter of course.courseChapter; let i=index">
+                                    <div id="heading{{i}}">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link btn-chap" data-toggle="collapse"
+                                                [attr.data-target]="'#collapse'+i" aria-expanded="true"
+                                                [attr.aria-controls]="'collapse'+i">
+                                                {{chapter.chapterName}}
+                                            </button>
+                                        </h5>
+                                    </div>
+    
+                                    <div id="collapse{{i}}" class="collapse show" [attr.aria-labelledby]="'heading'+i"
+                                        data-parent="#accordion">
+                                        <div>
+                                            <ul *ngFor="let module of course.courseChapter[i].chapterModule; let j=index;let m=count">
+                                                <li class="modulelist">
+                                                    <a routerLink="modules/{{courseId}}/{{i}}/{{j}}"
+                                                        routerLinkActive="yellow" id="tick"
+                                                        
+                                                        [ngClass]="module.module_no*20 <= progress_ls ? 'green' : 'red'"
+                                                        class="btn-module">
+                                                        <!-- [ngClass]="{'green': progress !== '100', 'red': progress === '100'}" -->
+                                                        <!-- [ngStyle]="{'color': progress === '100' ? 'red' : 'darkgreen'}" -->
+                                                        {{module.moduleName}}
+                                                    </a>
+                                                    <div *ngIf="module.complete" class="fa fa-check tick"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+    
+                                    <div id="collapse{{i}}" class="collapse show" [attr.aria-labelledby]="'heading'+i"
+                                        data-parent="#accordion">
+                                        <div>
+                                            <ul *ngFor="let quiz of course.courseChapter[i].chapterQuiz; let j=index">
+                                                <li class="modulelist">
+                                                    <a routerLink="quiz/{{courseId}}/{{i}}/{{j}}" class="btn-module">
+                                                        Quiz&nbsp;{{quiz.quizId}}
+                                                    </a>
+                                                    <div *ngIf="quiz.complete" class="fa fa-check tick"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+    
+    
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+    
+            <div class="col-sm-10 main-box">
+    
+                <h2 class="course-head">{{course.courseName}} </h2>
+    
+                <!-- <h2 style="margin-left: 22%;">{{course.courseName}}</h2> -->
+    
+                <!-- <h5 >course progress {{progress}}% </h5> -->
+                <!-- <mat-progress-bar mode="determinate" value="{{progress}}" class="progress-bar"></mat-progress-bar> -->
+    
+              
+                <!-- <div class="row modulebox"> 
+                    <div class="col-sm-12">
+                        <div *ngIf="modules" class="modules">
+                            <h5 class="module-name">{{module.moduleName}}</h5>
+                            <ul *ngFor="let mod of module.moduleDetails; let i=index;" class="modulelist"  >
+                              <li >
+                                <h5 class="module-title">{{mod.title}}</h5>
+                              </li>
+                              <li>{{mod.description}}</li>
+                              <li *ngIf="mod.moduleImage" class="moduleImage">
+                                <img src="{{mod.moduleImage}}" alt="">
+                              </li>
+                              <li *ngIf="mod.codesnippet">
+                                <textarea highlight-js [lang]="'java'" [ngModel]="java">
+                                  {{mod.codesnippet}}
+                                </textarea>
+                              </li>
+                              <li *ngIf="module.moduleDetails[i].subModule">
+                                <ul *ngFor="let submod of module.moduleDetails[i].subModule">
+                                  <li *ngIf="submod.subtitle">{{submod.subtitle}}</li>
+                                  <li *ngIf="submod.subdescription" class="subdescription">{{submod.subdescription}}</li>
+                                </ul>
+                              </li>
+                              <li *ngIf="mod.youtubelink" class="youtubelink">
+                               <iframe [src]="mod.youtubelink | safe"  width="420" height="345"></iframe>
+                              </li>
+                            </ul>
+                            </div>
+                    </div>
+                    
+                     <nav aria-label="..." class="next-prev">
+                      <ul class="pagination">
+                        <li class="page-item nav-prev">
+                          <a class="page-link" (click)="previous()" >Previous</a>
+                        </li>
+                        
+                        <li class="page-item nav-next" >
+                          <a class="page-link" routerLinkActive="one" (click)="next()">Next</a>
+                        </li>
+                      </ul>
+                    </nav> -->
+                <!-- </div>-->
+    
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,84 @@
+.modulebox {
+    padding-left: 17px;
+}
+
+.modules {
+    margin-top: 32px;
+}
+
+.module-name {
+    color: #000;
+    font-size: 20px;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+.modulelist {
+    list-style-type: none;
+}
+
+.module-title {
+    font-size: 15px;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    color: #1d37b5;
+}
+.progress-bar {
+    height: 23px;
+}
+
+.next-prev {
+    display: block;
+    margin: 0 auto;
+}
+
+.pagination li:nth-child(n+1) {
+    margin-right: 20px;
+}
+
+.pagination li {
+    width: 100px;
+    text-align: center;
+    border-radius: .25rem;
+}
+
+
+
+.nav-next,
+.nav-next button,
+.nav-prev,
+.nav-prev button {
+    background: #408eef;
+    border: 1px solid #408eef;
+    font-size: 15px;
+    color: #fff;
+    transition: all .5s;
+}
+
+.nav-next:hover,
+.nav-next button:hover,
+.nav-prev:hover,
+.nav-prev button:hover{
+    background: #3a71b5;
+    border : 1px solid #3a71b5;
+}
+
+.quiz-container {
+    width: 64%;
+    margin: 20px auto 20px auto;
+    background: #f3f3da;
+    padding: 20px 40px;
+}
+
+.quiz-head {
+    text-align: center;
+    font-size: 33px;
+    font-weight: 800;
+    font-family: "Playfair Display", Georgia, serif;
+    color: #0072b1;
+    margin-bottom: 23px;
+}
+
+.tick {
+    color: #42c142;
+}
+

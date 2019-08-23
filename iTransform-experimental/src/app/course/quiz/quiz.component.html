@@ -1,0 +1,59 @@
+<h5>course progress {{count}} of {{total}}</h5>
+<mat-progress-bar mode="determinate" value="{{progress}}" class="progress-bar"></mat-progress-bar>
+<div class="quiz-container">
+  <h2 class="quiz-head">Quiz Time</h2>
+<div class="container">
+    <div>
+        <p>{{quiz.question}}</p>
+        <div *ngIf=correct class="fa fa-check tick" > completed</div>
+        <div *ngIf=!correct class="fa fa-times tick" style="color:red"> not completed</div>
+        <!-- <div *ngIf=replyBool >{{reply}}</div> -->
+
+        <form (ngSubmit)="onSubmit()" >
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="option" id="option1" class="form-check-input"  value="{{quiz.option1}}"  [(ngModel)]="option"/>
+                    <label for="option1">{{quiz.option1}}</label>
+                </div><br>
+
+                <div class="form-check form-check-inline">
+                        <input type="radio" name="option" id="option2" class="form-check-input" value="{{quiz.option2}}"  [(ngModel)]="option"/>
+                            <label for="option2">{{quiz.option2}}</label>
+                    </div><br>
+
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="option" id="option3" class="form-check-input" value="{{quiz.option3}}"  [(ngModel)]="option"/>
+                        <label for="option3">{{quiz.option3}}</label>
+                    </div><br>
+
+                    <div class="form-check form-check-inline">
+                        <input type="radio" name="option" id="option4" class="form-check-input"  value="{{quiz.option4}}"  [(ngModel)]="option"/>
+                        <label for="option4">{{quiz.option4}}</label>
+                    </div><br>
+                 
+                    
+                    <nav aria-label="..." class="next-prev">
+                      <ul class="pagination">
+                        <li class="page-item">
+                            <button type="submit" class="btn btn-block btn-primary">Submit</button>
+                        </li>
+                        
+                      </ul>
+                    </nav>
+            </div>
+        </form>
+
+        <div>
+          <ul>
+            <li class="page-item nav-prev">
+              <button class="page-link btn btn-block btn-primary" (click)="previous()" >Previous</button>
+            </li>
+            <br>
+            <li class="page-item nav-next">
+              <button class="page-link btn-block btn btn-primary" (click)="next()">Next</button>
+            </li>
+          </ul>
+        </div>
+    </div>
+</div>
+</div>

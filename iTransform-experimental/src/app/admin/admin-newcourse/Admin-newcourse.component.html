@@ -1,0 +1,132 @@
+<!-- <div class="wrapper">
+    <div class="" id="login-page">
+        <div class="form-box">
+            <form  (ngSubmit)="onSubmit()"  >
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="courseId">Course Id</label>
+                        <input type="number" class="form-control box1" placeholder="Course Id"  id="courseId" name="courseid">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="courseName">Course Name</label>
+                        <input type="text" class="form-control" placeholder="Course Name" name="coursename" id="courseName">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label for="courseImage">Course Image</label>
+                        <input type="file" class="file"  name="courseimage" id="courseImage" >
+                    </div>
+                </div>
+                <div class="repeat">
+                    <div class="field">
+                        
+                        <div class="row ">
+                            <div class="col-sm-6 row-repeat">
+                                <label for="chapterName" class="chapname">Chapter Name</label>
+                                <div class="input-group control-group after-add-more">
+                                    <input type="text" class="form-control chaptername" placeholder="Chapter Name" name="chaptername" id="chapterName">
+                                </div>
+                            </div>
+                            <div class="col-sm-6 btn-wrapper">
+                                <div class="input_fields_wrap">
+                                    <button class="btn btn-success add_field_button " id="add-more" type="button"><i class="glyphicon glyphicon-plus"></i> Add</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="moduleName">Module Name</label>
+                                <div class="input-group control-group after-add-more">
+                                    <input type="text" class="form-control" placeholder="Module Name" name="modulename" id="moduleName">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="title">Title</label>
+                                <div class="input-group control-group after-add-more">
+                                    <input type="text" class="form-control" placeholder="Title" name="title" id="title">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row new-row">
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                
+                <input type="submit" class="btn btn-social" value="LOGIN" />
+                <a routerLink="/signup" class="login-action" title="Sign up">
+                    <p>New userName?&nbsp;Signup</p>
+                </a>
+            </form>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="wrapper">
+    <div id="login-page">
+        <div class="form-box">
+            <form (ngSubmit)="addCourses()" [formGroup]="adminWelcomeForm">
+                <!-- #courseForm="ngForm" -->
+                <!-- [(ngModel)]="course.courseId" -->
+                <!-- [(ngModel)]="course.courseName" -->
+                <!--  [(ngModel)]="course.courseImage" -->
+                <!-- [(ngModel)]="course.courseChapter.chapterName" -->
+                <!-- [(ngModel)]="course.courseChapter.chapterModule.moduleName" -->
+                <!-- [class.is-invalid]="group.controls.courseName.touched && group.controls.courseName.invalid"  required -->
+                <!-- (click)="action('item 1') -->
+                <!--multiple repeatetion of course-->
+                <div class="col-xs-12" >
+                    <div class="col-md-12">
+
+                        <!-- *ngFor="let group of courseArray.controls; let i=index" [formGroupName]="i" -->
+
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="courseName">Course Name</label>
+                            <div class="col-md-5">
+                                <!-- <dropdown>
+                                            <dropdown-item name="java">Java</dropdown-item>
+                                            <dropdown-item (click)="action('item 2')">.net</dropdown-item>
+                                            <dropdown-item (click)="action('item 2')">Ruby</dropdown-item>
+                                            <dropdown-item (click)="action('item 2')">python</dropdown-item>
+                                        <dropdown> -->
+                                <select name="courseName">
+                                    <option value="Java">Java</option>
+                                    <option value=".net">.Net</option>
+                                    <option value="c">C</option>
+                                    <option value="python">Python</option>
+                                </select>
+                                <div class="text-danger"
+                                    [class.d-none]="group.controls.courseName.valid || group.controls.courseName.untouched">
+                                    Course Name is required</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="courseImage">Course Image</label>
+                            <div class="col-md-5">
+                                <input id="courseImage" name="courseImage" formControlName="courseImage" type="file">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Button -->
+                <!-- <div class="form-group">
+                    <div class="col-md-4">
+                        <button id="add-more" name="add-more" (click)="addCourses()" class="btn btn-primary"
+                            [disabled]="adminWelcomeForm.get('course').invalid">Add More</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <button id="remove" name="remove" (click)="removeCourses()"
+                            class="btn btn-primary">Remove</button>
+                    </div>
+                </div> -->
+                <input type="button" routerLink="/addchapter" class="btn btn-social" (click)="addCourses()"
+                    value="Submit" />
+            </form>
+        </div>
+    </div>
+</div>

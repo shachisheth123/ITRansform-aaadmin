@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <h2 class="course-head">Courses to get you started</h2>
+<div class="container course-box">
+    <ul class="course-list">
+        <li *ngFor="let c of courses;let i=index" class="course-card">
+            <a routerLink="/welcomechapter/{{c.courseId}}" class="courselink">
+                <img src="{{c.courseImage}}" alt="" width="200px" height="100px">
+                <span class="course-name">{{c.courseName}}</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</div>
+

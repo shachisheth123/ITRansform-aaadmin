@@ -1,0 +1,648 @@
+﻿[
+    {
+        "courseId":101,
+        "courseName": "Core Java",
+        "courseImage": "assets/images/java.jpg",
+        "courseChapter" : [
+            {
+                "chapterName" : "Java Basics",
+                "chapterModule" : [
+                    {
+                        "moduleName": "Java Basic Syntax",
+                        "moduleDetails" : [
+                            {
+                                "description" : "When we consider a Java program, it can be defined as a collection of objects that communicate via invoking each other's methods. Let us now briefly look into what do class, object, methods, and instance variables mean.",
+                                "subModule" : [
+                                    {
+                                        "subtitle" : "Object",
+                                        "subdescription" : "Objects have states and behaviors. Example: A dog has states - color, name, breed as well as behavior such as wagging their tail, barking, eating. An object is an instance of a class."
+                                    },
+                                    {
+                                        "subtitle" : "Class",
+                                        "subdescription": " A class can be defined as a template/blueprint that describes the behavior/state that the object of its type supports."
+                                    },
+                                    {
+                                        "subtitle" : "Methods ",
+                                        "subdescription" :"A method is basically a behavior. A class can contain many methods. It is in methods where the logics are written, data is manipulated and all the actions are executed."
+                                    },
+                                    {
+                                        "subtitle": "Instance Variables",
+                                        "subdescription": " Each object has its unique set of instance variables. An object's state is created by the values assigned to these instance variables."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "First Java Program",
+                                "description": "Let us look at a simple code that will print the words Hello World.",
+                                "codesnippet" : "public class MyFirstJavaProgram { \n //* This is my first java program. \n* This will print 'Hello World' as the output *// \npublic static void main(String []args) {\n System.out.println('Hello World'); // prints Hello World \n}\n}",
+                                "youtubelink": "https://www.youtube.com/embed/43zD0IRiO30"
+                            },
+                            {
+                                "title": "Java Identifiers",
+                                "description" : "All Java components require names. Names used for classes, variables, and methods are called identifiers.\n In Java, there are several points to remember about identifiers. They are as follows − \n ",
+                                "submodule" : [
+                                    {
+                                        "subdescription" : "All identifiers should begin with a letter (A to Z or a to z), currency character ($) or an underscore (_).\n After the first character, identifiers can have any combination of characters.\n A key word cannot be used as an identifier.\n Most importantly, identifiers are case sensitive.\nExamples of legal identifiers: age, $salary, _value, __1_value.\n Examples of illegal identifiers: 123abc, -salary."
+                                    }
+                                ]
+                            },
+                            {
+                                "title" : "Java Modifiers",
+                                "description": "Like other languages, it is possible to modify classes, methods, etc., by using modifiers. There are two categories of modifiers −",
+                                "subModule": [
+                                    {
+                                        "subtitle" : "Access Modifiers ",
+                                        "subdescription" : " default, public , protected, private"
+                                    },
+                                    {
+                                        "subtitle": "Non-access Modifiers",
+                                        "subdescription" : "final, abstract, strictfp"
+                                    }
+                                ]
+                                
+                            },
+                            {
+                                "title" : "Java Variables",
+                                "description": "Following are the types of variables in Java −\nLocal Variables \n Class Variables (Static Variables) \nInstance Variables (Non-static Variables)"
+                            },
+                            {
+                                "title": "Java Arrays",
+                                "description": "Arrays are objects that store multiple variables of the same type. However, an array itself is an object on the heap. We will look into how to declare, construct, and initialize in the upcoming chapters."
+                            },
+                            {
+                                "title": "Java Enums",
+                                "description" : "Enums were introduced in Java 5.0. Enums restrict a variable to have one of only a few predefined values. The values in this enumerated list are called enums.\nWith the use of enums it is possible to reduce the number of bugs in your code.\nFor example, if we consider an application for a fresh juice shop, it would be possible to restrict the glass size to small, medium, and large. This would make sure that it would not allow anyone to order any size other than small, medium, or large.",
+                                "codesnippet": "class FreshJuice { \n enum FreshJuiceSize{ SMALL, MEDIUM, LARGE } \n FreshJuiceSize size;\n}\npublic class FreshJuiceTest {\npublic static void main(String args[]) {\nFreshJuice juice = new FreshJuice();\njuice.size = FreshJuice.FreshJuiceSize.MEDIUM ;\nSystem.out.println('Size: ' + juice.size);\n}\n}"
+                            }
+                        ],
+                        "isComplete":false
+                    },
+                    {
+                        "moduleName" : "Object and Classes",
+                        "moduleDetails": [
+                            {
+                                "title": "Objects",
+                                "description": "Let us now look deep into what are objects. If we consider the real-world, we can find many objects around us, cars, dogs, humans, etc. All these objects have a state and a behavior.\n If we consider a dog, then its state is - name, breed, color, and the behavior is - barking, wagging the tail, running.\n If you compare the software object with a real-world object, they have very similar characteristics.\n Software objects also have a state and a behavior. A software object's state is stored in fields and behavior is shown via methods.\n So in software development, methods operate on the internal state of an object and the object-to-object communication is done via methods.",
+                                "moduleImage": "/assets/images/java-object.jpg"
+                            },
+                            {
+                                "title": "Classes",
+                                "description": "A class is a blueprint from which individual objects are created.\n Following is a sample of a class.",
+                                "moduleImage": "/assets/images/class-in-java.png",
+                                "subModule": [
+                                    {
+                                        "subtitle" : "Local variables",
+                                        "subdescription": "Variables defined inside methods, constructors or blocks are called local variables. The variable will be declared and initialized within the method and the variable will be destroyed when the method has completed."
+                                    },
+                                    {
+                                        "subtitle": "Instance variables",
+                                        "subdescription": " Instance variables are variables within a class but outside any method. These variables are initialized when the class is instantiated. Instance variables can be accessed from inside any method, constructor or blocks of that particular class."
+                                    },
+                                    {
+                                        "subtitle": "Class variables ",
+                                        "subdescription": " Class variables are variables declared within a class, outside any method, with the static keyword."
+                                    }, {
+                                        "subdescription": "A class can have any number of methods to access the value of various kinds of methods. In the above example, barking(), hungry() and sleeping() are methods."
+                                    }
+                                ],
+                                "codesnippet": "public class Dog { \nString breed;\nint age;\nString color;\nvoid barking() { \n  } \nvoid hungry() { \n  }\n void sleeping() {\n   }\n }"
+                            },
+                            {
+                                "title": "Constructors",
+                                "description": "When discussing about classes, one of the most important sub topic would be constructors. Every class has a constructor. If we do not explicitly write a constructor for a class, the Java compiler builds a default constructor for that class.\n Each time a new object is created, at least one constructor will be invoked. The main rule of constructors is that they should have the same name as the class. A class can have more than one constructor.\n Following is an example of a constructor − ",
+                                "codesnippet": "public class Puppy { \n public Puppy() { \n  } \npublic Puppy(String name) { \n // This constructor has one parameter, name. \n  } \n  }"
+                            },
+                            {
+                                "title": "Creating an Object",
+                                "description": "As mentioned previously, a class provides the blueprints for objects. So basically, an object is created from a class. In Java, the new keyword is used to create new objects.\n There are three steps when creating an object from a class −",
+                                "subModule": [
+                                    {
+                                        "subtitle" : "Declaration",
+                                        "subdescription": "A variable declaration with a variable name with an object type."
+                                    },
+                                    {
+                                        "subtitle": "Instantiation ",
+                                        "subdescription" : " The 'new' keyword is used to create the object."                                    
+                                    },
+                                    {
+                                        "subtitle": "Initialization",
+                                        "subdescription": "The 'new' keyword is followed by a call to a constructor. This call initializes the new object."
+                                    }
+                                ],
+                                "codesnippet": "public class Puppy { \n public Puppy(String name) {\n // This constructor has one parameter, name.\n System.out.println('Passed Name is :' + name );\n} \npublic static void main(String []args) { \n// Following statement would create an object myPuppy  \nPuppy myPuppy = new Puppy( 'tommy' );\n }\n }",
+                                "youtubelink": "https://www.youtube.com/embed/MeP1CztNMdo"
+                            },
+                            {
+                                "title": "Accessing Instance Variables and Methods",
+                                "description": "nstance variables and methods are accessed via created objects. To access an instance variable, following is the fully qualified path −",
+                                "codesnippet" : "/* First create an object */ \n ObjectReference = new Constructor();\n/* Now call a variable as follows */\nObjectReference.variableName;\n /* Now you can call a class method as follows */ \n ObjectReference.MethodName();",
+                                "youtubelink": "https://www.youtube.com/embed/q4vknQYjHy8"
+                            },
+                            {
+                                "title": "Java Package",
+                                "description": "In simple words, it is a way of categorizing the classes and interfaces. When developing applications in Java, hundreds of classes and interfaces will be written, therefore categorizing these classes is a must as well as makes life much easier."
+                            },
+                            {
+                                "title": "Import Statements",
+                                "description": "In Java if a fully qualified name, which includes the package and the class name is given, then the compiler can easily locate the source code or classes. Import statement is a way of giving the proper location for the compiler to find that particular class.\n For example, the following line would ask the compiler to load all the classes available in directory java_installation/java/io −",
+                                "codesnippet" : "import java.io.*;"
+                            }
+                        ],
+                        "isComplete":false
+                    },
+                    {
+                        "moduleName": "Constructors",
+                        "moduleDetails":[
+                            {
+                                "description": "A constructor initializes an object when it is created. It has the same name as its class and is syntactically similar to a method. However, constructors have no explicit return type.\nTypically, you will use a constructor to give initial values to the instance variables defined by the class, or to perform any other start-up procedures required to create a fully formed object.\nAll classes have constructors, whether you define one or not, because Java automatically provides a default constructor that initializes all member variables to zero. However, once you define your own constructor, the default constructor is no longer used.",
+                                "subModule": [
+                                    {
+                                        "subtitle" : "Java allows two types of constructors namely −",
+                                        "subdescription": "No argument Constructors"
+                                    },
+                                    {
+                                        "subdescription": "Parameterized Constructors"
+                                    }
+                                ],
+                                "codesnippet" : "class ClassName {\n ClassName() { \n } \n }",
+                                "youtubelink": "https://www.youtube.com/embed/0Jc_rT7t1W8"
+                            },
+                            {
+                                "title": "No argument Constructors",
+                                "description": "As the name specifies the no argument constructors of Java does not accept any parameters instead, using these constructors the instance variables of a method will be initialized with fixed values for all objects.",
+                                "codesnippet": "Public class MyClass { \n Int num;\n MyClass() {\n  num = 100;\n  }\n}"
+                            }
+                        ],
+                        "isComplete": false
+                    },
+                    {
+                        "moduleName": " Basic Datatypes",
+                        "moduleDetails": [
+                            {
+                                "description": "Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in the memory.\n Based on the data type of a variable, the operating system allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals, or characters in these variables.\n There are two data types available in Java −",
+                                "subModule" : [
+                                    {
+                                        "subtitle" : "Primitive Data Types"
+                                    },
+                                    {
+                                        "subtitle": "Reference/Object Data Types"
+                                    },
+                                    {
+                                        "subtitle": "Primitive Data Types",
+                                        "subdescription" : "There are eight primitive datatypes supported by Java. Primitive datatypes are predefined by the language and named by a keyword. Let us now look into the eight primitive data types in detail."
+                                    },
+                                    {
+                                        "subtitle": "byte",
+                                        "subdescription": "Byte data type is an 8-bit signed two's complement integer \nMinimum value is -128 (-2^7)\nMaximum value is 127 (inclusive)(2^7 -1)\nDefault value is 0 \nByte data type is used to save space in large arrays, mainly in place of integers, since a byte is four times smaller than an integer.\nExample: byte a = 100, byte b = -50"
+                                    },
+                                    {
+                                        "subtitle": "short",
+                                        "subdescription": "Short data type is a 16-bit signed two's complement integer \nMinimum value is -32,768 (-2^15)\nMaximum value is 32,767 (inclusive) (2^15 -1)\nShort data type can also be used to save memory as byte data type. A short is 2 times smaller than an integer \nDefault value is 0.\n Example: short s = 10000, short r = -20000"
+                                    },
+                                    {
+                                        "subtitle": "int",
+                                        "subdescription": "Int data type is a 32-bit signed two's complement integer.\nMinimum value is - 2,147,483,648 (-2^31)\nMaximum value is 2,147,483,647(inclusive) (2^31 -1)\nInteger is generally used as the default data type for integral values unless there is a concern about memory.\nThe default value is 0\nExample: int a = 100000, int b = -200000"
+                                    },
+                                    {
+                                        "subtitle": "long",
+                                        "subdescription": "Long data type is a 64-bit signed two's complement integer \nMinimum value is -9,223,372,036,854,775,808(-2^63)\nMaximum value is 9,223,372,036,854,775,807 (inclusive)(2^63 -1)\nThis type is used when a wider range than int is needed\nDefault value is 0L\nExample: long a = 100000L, long b = -200000L"
+                                    },
+                                    {
+                                        "title": "float",
+                                        "subdescription": "Float data type is a single-precision 32-bit IEEE 754 floating point \nFloat is mainly used to save memory in large arrays of floating point numbers \nDefault value is 0.0f\nFloat data type is never used for precise values such as currency\nExample: float f1 = 234.5f"
+                                    },
+                                    {
+                                        "subtitle": "double",
+                                        "subdescription": "double data type is a double-precision 64-bit IEEE 754 floating point \nThis data type is generally used as the default data type for decimal values, generally the default choice \nDouble data type should never be used for precise values such as currency \nDefault value is 0.0d  \nExample: double d1 = 123.4"
+                                    },
+                                    {
+                                        "subtitle": "boolean",
+                                        "subdescription": "boolean data type represents one bit of information \nThere are only two possible values: true and false\nThis data type is used for simple flags that track true/false conditions\nDefault value is false\nExample: boolean one = true"
+                                    },
+                                    {
+                                        "subtitle": "char",
+                                        "subdescription": "char data type is a single 16-bit Unicode character\nMinimum value is '\u0000' (or 0)\nMaximum value is '\uffff' (or 65,535 inclusive)\nChar data type is used to store any character\nExample: char letterA = 'A'"
+                                    }
+                                ],
+                                "youtubelink": "https://www.youtube.com/embed/RnD6NJs5xoI"
+                            },
+                            {
+                                "title": "Java Literals",
+                                "description": "A literal is a source code representation of a fixed value. They are represented directly in the code without any computation.\n Literals can be assigned to any primitive type variable. For example −",
+                                "codesnippet": "yte a = 68; \nchar a = 'A';"
+                            },
+                            {
+                                "description": "byte, int, long, and short can be expressed in decimal(base 10), hexadecimal(base 16) or octal(base 8) number systems as well.\nPrefix 0 is used to indicate octal, and prefix 0x indicates hexadecimal when using these number systems for literals. For example −",
+                                "codesnippet": "int decimal = 100;\nint octal = 0144;\nint hexa =  0x64;"
+                            },
+                            {
+                                "description": "String literals in Java are specified like they are in most other languages by enclosing a sequence of characters between a pair of double quotes. Examples of string literals are −",
+                                "codesnippet": "'Hello World'\n'two\\nlines'\n'\\'This is in quotes\\''"
+                            },
+                            {
+                                "description": "String and char types of literals can contain any Unicode characters. For example −",
+                                "codesnippet": "char a = '\\u0001';\nString a = '\\u0001';"
+                            }
+                        ],
+                        "isComplete": false
+                    }
+                ],
+                "chapterQuiz": [
+                    {
+                        "quizId": 1,
+                        "question": " What is the range of short data type in Java?",
+                        "option1": "-128 to 127",
+                        "option2": "-32768 to 32767",
+                        "option3": "-2147483648 to 2147483647",
+                        "option4": "None of the mentioned",
+                        "answer": "-32768 to 32767",
+                        "isComplete": false
+                    },
+                    {
+                        "quizId": 2,
+                        "question": "Which one is a valid declaration of a boolean?",
+                        "option1": " boolean b1 = 1",
+                        "option2":   "boolean b2 = ‘false’",
+                        "option3" :   "boolean b3 = false",
+                        "option4": "boolean b4 = ‘true’",
+                        "answer":"boolean b3 = false",
+                        "isComplete": false
+                    },
+                    {
+                        "quizId": 3,
+                        "question": "Which of these can not be used for a variable name in Java?",
+                        "option1": " identifier",
+                        "option2": "keyword",
+                        "option3": "identifier & keyword",
+                        "option4": " none of the mentioned",
+                        "answer": "keyword",
+                        "isComplete": false
+                    },
+                    {
+                        "quizId": 4,
+                        "question": "Which of these class is superclass of every class in Java?",
+                        "option1" : "String class",
+                        "option2": "Object class",
+                        "option3": "Abstract class",
+                        "option4": "ArrayList class",
+                        "answer": "Object class",
+                        "isComplete": false
+                    },
+                    {
+                        "quizId": 5,
+                        "question": "Which of these keywords cannot be used for a class which has been declared final?",
+                        "option1": "abstract",
+                        "option2": "extends",
+                        "option3": "abstract and extends",
+                        "option4" : "none of the mentioned",
+                        "answer": "abstract",
+                        "isComplete": false
+                    }
+                ]
+            },
+            {
+                "chapterName" : "Object Oriented",
+                "chapterModule" : [
+                    {
+                        "moduleName": "Inheritance",
+                        "moduleDetails" : [
+                           {
+                            "description": "Inheritance can be defined as the process where one class acquires the properties (methods and fields) of another. With the use of inheritance the information is made manageable in a hierarchical order.\nThe class which inherits the properties of other is known as subclass (derived class, child class) and the class whose properties are inherited is known as superclass (base class, parent class)."
+                           },
+                           {
+                               "title": "extends Keyword",
+                               "description": "extends is the keyword used to inherit the properties of a class. Following is the syntax of extends keyword.",
+                               "codesnippet": "class Super {\n    .....\n  .....\n}\nclass Sub extends Super {\n  .....\n  .....\n}"
+                           },
+                           {
+                               "title": "Sample Code",
+                               "description": "Following is an example demonstrating Java inheritance. In this example, you can observe two classes namely Calculation and My_Calculation.\nUsing extends keyword, the My_Calculation inherits the methods addition() and Subtraction() of Calculation class.\nCopy and paste the following program in a file with name My_Calculation.java",
+                               "codesnippet": "class Calculation {\n    int z;\n    public void addition(int x, int y) {\n       z = x + y;\n       System.out.println('The sum of the given numbers:'+z);\n    }\n    public void Subtraction(int x, int y) {\n       z = x - y;\n       System.out.println('The difference between the given numbers:'+z);\n    }\n }\n public class My_Calculation extends Calculation {\n    public void multiplication(int x, int y) {\n       z = x * y;\n       System.out.println('The product of the given numbers:'+z);\n    }\n    public static void main(String args[]) {\n       int a = 20, b = 10;\n       My_Calculation demo = new My_Calculation();\n       demo.addition(a, b);\n       demo.Subtraction(a, b);\n       demo.multiplication(a, b);\n    }\n}"
+                           },
+                           {
+                               "description": "After executing the program, it will produce the following result −",
+                               "codesnippet": "The sum of the given numbers:30/nThe difference between the given numbers:10/nThe product of the given numbers:200"
+                           },
+                           {
+                               "title": "IS-A Relationship",
+                               "description": "IS-A is a way of saying: This object is a type of that object. Let us see how the extends keyword is used to achieve inheritance.",
+                               "codesnippet": "public class Animal {\n}\npublic class Mammal extends Animal {\n}\npublic class Reptile extends Animal {\n}\npublic class Dog extends Mammal {\n}"
+                           },
+                           {
+                               "description": "Now, based on the above example, in Object-Oriented terms, the following are true −",
+                               "subModule": [
+                                   {
+                                       "subdescription": "Animal is the superclass of Mammal class."
+                                   },
+                                   {
+                                        "subdescription": "Animal is the superclass of Reptile class."     
+                                   },
+                                   {
+                                       "subdescription": "Mammal and Reptile are subclasses of Animal class."
+                                   },
+                                   {
+                                       "subdescription": "Dog is the subclass of both Mammal and Animal classes."
+                                   },
+                                   {
+                                       "subdescription": "Now, if we consider the IS-A relationship, we can say −"
+                                   },
+                                   {
+                                       "subdescription": "Mammal IS-A Animal"
+                                   },
+                                   {
+                                       "subdescription": "Reptile IS-A Animal"
+                                   },
+                                   {
+                                       "subdescription": "Dog IS-A Mammal"
+                                   },
+                                   {
+                                       "subdescription": "Hence: Dog IS-A Animal as well"
+                                   }
+                               ]
+                           },
+                           {
+                               "description": "With the use of the extends keyword, the subclasses will be able to inherit all the properties of the superclass except for the private properties of the superclass.\nWe can assure that Mammal is actually an Animal with the use of the instance operator.",
+                               "codesnippet": "class Animal {\n}\nclass Mammal extends Animal {\n}\nclass Reptile extends Animal {\n}\npublic class Dog extends Mammal {\n   public static void main(String args[]) {\n      Animal a = new Animal();\n      Mammal m = new Mammal();\n      Dog d = new Dog();\n      System.out.println(m instanceof Animal);\n      System.out.println(d instanceof Mammal);\n      System.out.println(d instanceof Animal);\n   }\n}"
+                           },
+                           {
+                               "description": "This will produce the following result −",
+                               "codesnippet": "true\ntrue\ntrue"
+                           },
+                           {
+                               "title": "HAS-A relationship",
+                               "description": "These relationships are mainly based on the usage. This determines whether a certain class HAS-A certain thing. This relationship helps to reduce duplication of code as well as bugs.\nLets look into an example −",
+                               "codesnippet": "public class Vehicle{}\npublic class Speed{}\npublic class Van extends Vehicle {\n  private Speed sp;\n}"
+                           },
+                           {
+                               "description": "This shows that class Van HAS-A Speed. By having a separate class for Speed, we do not have to put the entire code that belongs to speed inside the Van class, which makes it possible to reuse the Speed class in multiple applications.\nIn Object-Oriented feature, the users do not need to bother about which object is doing the real work. To achieve this, the Van class hides the implementation details from the users of the Van class. So, basically what happens is the users would ask the Van class to do a certain action and the Van class will either do the work by itself or ask another class to perform the action.",
+                               "codesnippet": "public class extends Animal, Mammal{}"
+                           }
+                        ]
+                    }
+                    ,{
+                        "moduleName": "Encapsulation",
+                        "moduleDetails": [
+                            {
+                                "title" : "Encapsulation",
+                                "description" : "The ability to make changes in your implementation code without breaking the code of others who use your code is a key benefit of encapsulation. You want to hide implementation details behind a public programming interface. By interface,we mean the set of accessible methods your code makes available for other code to call?in other words, your code's API. By hiding implementation details, you can rework your method code (perhaps also altering the way variables are used by your class) without forcing a change in the code that calls your changed method. If you want maintainability, flexibility, and extensibility (and of course, you do),your design must include encapsulation. How do you do that?? Keep instance variables protected (with an access modifier, often private).? Make public accessor methods, and force calling code to use those methods rather than directly accessing the instance variable.? For the methods, use the JavaBeans naming convention of set<someProperty> and get<someProperty>"
+                            }
+                        ],
+                        "isComplete":false
+                    },
+                    {
+                        "moduleName": "Inheritance",
+                        "moduleDetails" : [
+                            {
+                                "title": "Inheritance",
+                                "description": "Inheritance is everywhere in Java. It's safe to say that it's almost (almost?) impossible to write even the tiniest Java program without using inheritance.In OO, the concept of IS-A is based on class inheritance or interface implementation. IS-A is a way of saying, this thing is a type of that thing. For example, a Mustang is a type of horse, so in OO terms we can say, Mustang IS-A Horse. Subaru IS-A Car. Broccoli IS-A Vegetable (not a very fun one, but it still counts). You express the IS-A relationship in Java through the keywords extends (for class inheritance) and implements (for interface implementation)."
+                            }
+                        ],
+                        "isComplete":false
+                    },
+                    {
+                        "moduleName" : "Polymorphism",
+                        "moduleDetails" : [
+                            {
+                                "title" : "Polymorphism",
+                                "description": "any Java object that can pass more than one IS-A test can be considered polymorphic. Other than objects of type Object, all Java objects are polymorphic in that they pass the IS-A test for their own type and for class Object.Remember that the only way to access an object is through a reference variable,and there are a few key things to remember about references:A reference variable can be of only one type, and once declared, that type can never be changed (although the object it references can change).? A reference is a variable, so it can be reassigned to other objects, (unless the reference is declared final).? A reference variable's type determines the methods that can be invoked on the object the variable is referencing.? A reference variable can refer to any object of the same type as the declared reference, or?this is the big one?it can refer to any subtype of the declared type!? A reference variable can be declared as a class type or an interface type. If the variable is declared as an interface type, it can reference any object of any class that implements the interface."
+                            }
+                        ],
+                        "isComplete":false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "courseId": 102,
+        "courseName": "HTML",
+        "courseImage": "assets/images/html.jpg",
+        "courseChapter": [
+           {
+               "chapterName": "HTML Overview", 
+               "chapterModule": [
+                   {
+                       "moduleName": "Basic HTML document",
+                       "moduleDetails": [
+                           {
+                               "description": "HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.",
+                               "subModule": [
+                                   {
+                                       "subdescription": "Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is called Hypertext."
+                                   },
+                                   {
+                                       "subdescription": "As its name suggests, HTML is a Markup Language which means you use HTML to simply 'mark-up' a text document with tags that tell a Web browser how to structure it to display."
+                                   }
+                               ]
+                           },
+                           {
+                               "description": "Originally, HTML was developed with the intent of defining the structure of documents like headings, paragraphs, lists, and so forth to facilitate the sharing of scientific information between researchers.\n Now, HTML is being widely used to format web pages with the help of different tags available in HTML language."
+                           },
+                           {
+                               "title": "Basic HTML Document",
+                               "description": "In its simplest form, following is an example of an HTML document −",
+                               "codesnippet": "<!DOCTYPE html> \n<html>\n  <head>\n     <title>This is document title</title>\n  </head>\n  <body>\n     <h1>This is a heading</h1>\n     <p>Document content goes here.....</p>\n  </body>\n </html>"
+                           },
+                           {
+                               "title": "HTML Tags",
+                               "description": "As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces <Tag Name>. Except few tags, most of the tags have their corresponding closing tags. For example, <html> has its closing tag </html> and <body> tag has its closing tag </body> tag etc.\n Above example of HTML document uses the following tags −",
+                               "subModule": [
+                                   {
+                                       "subtitle": "<!DOCTYPE...>",
+                                       "subdescription": "This tag defines the document type and HTML version."
+                                   },
+                                   {
+                                        "subtitle": "<html>",
+                                        "subdescription": "This tag encloses the complete HTML document and mainly comprises of document header which is represented by <head>...</head> and document body which is represented by <body>...</body> tags."
+                                   },
+                                   {
+                                       "subtitle": "<head>",
+                                       "subdescription": "This tag represents the document's header which can keep other HTML tags like <title>, <link> etc."
+                                   },
+                                   {
+                                       "subtitle": "<title>",
+                                       "subdescription": "The <title> tag is used inside the <head> tag to mention the document title."
+                                   },
+                                   {
+                                       "subtitle": "<body>",
+                                       "subdescription": "This tag represents the document's body which keeps other HTML tags like <h1>, <div>, <p> etc."
+                                   },
+                                   {
+                                       "subtitle": "<h1>",
+                                       "subdescription": "This tag represents the heading."
+                                   },
+                                   {
+                                       "subtitle": "<p>",
+                                       "subdescription": "This tag represents a paragraph."
+                                   }
+                               ]
+                           },
+                           {
+                                "title": "HTML Document Structure",
+                                "description": "A typical HTML document will have the following structure −",
+                                "codesnippet": "<html>\n    <head>\n       Document header related tags\n    </head>\n    <body>\n       Document body related tags\n    </body>\n </html>"   
+                           },
+                           {
+                               "title": "The <!DOCTYPE> Declaration",
+                               "description": "The <!DOCTYPE> declaration tag is used by the web browser to understand the version of the HTML used in the document. Current version of HTML is 5 and it makes use of the following declaration −",
+                               "codesnippet": "<!DOCTYPE html>"
+                           }
+                       ]
+                   },
+                   {
+                       "moduleName": "HTML – BASIC TAGS",
+                       "moduleDetails": [
+                           {
+                               "title": "Heading Tags",
+                               "description": "Any document starts with a heading. You can use different sizes for your headings. HTML also has six levels of headings, which use the elements <h1>, <h2>, <h3>, <h4>, <h5>, and <h6>. While displaying any heading, browser adds one line before and one line after that heading.",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Heading Example</title>\n  </head>\n  <body>\n     <h1>This is heading 1</h1>\n     <h2>This is heading 2</h2>\n     <h3>This is heading 3</h3>\n     <h4>This is heading 4</h4>\n     <h5>This is heading 5</h5>\n     <h6>This is heading 6</h6>\n  </body>\n</html>"
+                           },
+                           {
+                               "title": "Paragraph Tag",
+                               "description": "The <p> tag offers a way to structure your text into different paragraphs. Each paragraph of text should go in between an opening <p> and a closing </p> tag as shown below in the example −",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Paragraph Example</title>\n  </head>\n  <body>\n     <p>Here is a first paragraph of text.</p>\n     <p>Here is a second paragraph of text.</p>\n     <p>Here is a third paragraph of text.</p>\n  </body>\n</html>"
+                           },
+                           {
+                               "title": "Line Break Tag",
+                               "description": "Whenever you use the <br /> element, anything following it starts from the next line. This tag is an example of an empty element, where you do not need opening and closing tags, as there is nothing to go in between them.\n The <br /> tag has a space between the characters br and the forward slash. If you omit this space, older browsers will have trouble rendering the line break, while if you miss the forward slash character and just use <br> it is not valid in XHTML.",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Line Break  Example</title>\n  </head>\n  <body>\n     <p>Hello<br />\n        You delivered your assignment ontime.<br />\n        Thanks<br />\n        Mahnaz</p>\n  </body>\n</html>"
+                           },
+                           {
+                               "title": "Centering Content",
+                               "description": "You can use <center> tag to put any content in the center of the page or any table cell.",
+                               "codesnippet": "<!DOCTYPE html> \n<html>\n  <head>\n     <title>Centring Content Example</title>\n  </head>\n  <body>\n     <p>This text is not in the center.</p>\n    <center>\n        <p>This text is in the center.</p>\n     </center>\n  </body>\n</html>"
+                           },
+                           {
+                               "title": "Horizontal Lines",
+                               "description": "Horizontal lines are used to visually break-up sections of a document. The <hr> tag creates a line from the current position in the document to the right margin and breaks the line accordingly.\n For example, you may want to give a line between two paragraphs as in the given example below −",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Horizontal Line Example</title>\n  </head>\n  <body>\n     <p>This is paragraph one and should be on top</p>\n     <hr />\n     <p>This is paragraph two and should be at bottom</p>\n  </body>\n</html>",
+                               "subModule": [
+                                   {
+                                       "subdescription": "Again <hr /> tag is an example of the empty element, where you do not need opening and closing tags, as there is nothing to go in between them.\n The <hr /> element has a space between the characters hr and the forward slash. If you omit this space, older browsers will have trouble rendering the horizontal line, while if you miss the forward slash character and just use <hr> it is not valid in XHTML"
+                                   }
+                               ]
+                           },
+                           {
+                               "title": "Preserve Formatting",
+                               "description": "Sometimes, you want your text to follow the exact format of how it is written in the HTML document. In these cases, you can use the preformatted tag <pre>.\n Any text between the opening <pre> tag and the closing </pre> tag will preserve the formatting of the source document.",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Preserve Formatting Example</title>\n </head>\n  <body>\n     <pre>\n        function testFunction( strText ){\n           alert (strText)\n        }\n     </pre>\n  </body>\n</html>"
+                           },
+                           {
+                               "title": "Nonbreaking Spaces",
+                               "description": "Suppose you want to use the phrase '12 Angry Men.' Here, you would not want a browser to split the '12, Angry' and 'Men' across two lines −",
+                               "codesnippet": "<!DOCTYPE html>\n<html>\n  <head>\n     <title>Nonbreaking Spaces Example</title>\n  </head>\n  <body>\n     <p>An example of this technique appears in the movie '12&nbsp;Angry&nbsp;Men.'</p>\n  </body>\n</html>"
+                           }
+                       ]
+                   }
+               ]
+           },
+           {
+               "chapterName": "HTML- Elements and Attributes",
+               "chapterModule": [
+                   {
+                       "moduleName": "HTML- Elements",
+                        "moduleDetails": [
+                            {
+                                "description": "An HTML element is defined by a starting tag. If the element contains other content, it ends with a closing tag, where the element name is preceded by a forward slash as shown below with few tags −",
+                                "subModule": [
+                                    {
+                                        "subdescription": "<p>This is paragraph content.</p>"
+                                    },
+                                    {
+                                        "subdescription": "<h1>This is heading content.</h1>"
+                                    },
+                                    {
+                                        "subdescription": "<div>This is division content.</div>"
+                                    },
+                                    {
+                                        "subdescription": "<br />"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "So here <p>....</p> is an HTML element, <h1>...</h1> is another HTML element. There are some HTML elements which don't need to be closed, such as <img.../>, <hr /> and <br /> elements. These are known as void elements. \n HTML documents consists of a tree of these elements and they specify how HTML documents should be built, and what kind of content should be placed in what part of an HTML document."
+                            },
+                            {
+                                "title": "HTML Tag vs. Element",
+                                "description": "An HTML element is defined by a starting tag. If the element contains other content, it ends with a closing tag.\n For example, <p> is starting tag of a paragraph and </p> is closing tag of the same paragraph but <p>This is paragraph</p> is a paragraph element."
+                            },
+                            {
+                                "title": "Nested HTML Elements",
+                                "description": "It is very much allowed to keep one HTML element inside another HTML element −",
+                                "codesnippet": "<!DOCTYPE html>\n<html>\n   <head>\n      <title>Nested Elements Example</title>\n   </head>\n   <body>\n      <h1>This is <i>italic</i> heading</h1>\n      <p>This is <u>underlined</u> paragraph</p>\n   </body>\n</html>"
+                            }
+                        ]
+                   },
+                   {
+
+                    "moduleName": "HTML- Attribute",
+                    "moduleDetails": [
+                        {
+                            "description": "We have seen few HTML tags and their usage like heading tags <h1>, <h2>, paragraph tag <p> and other tags. We used them so far in their simplest form, but most of the HTML tags can also have attributes, which are extra bits of information.\nAn attribute is used to define the characteristics of an HTML element and is placed inside the element's opening tag. All attributes are made up of two parts − a name and a value",
+                            "subModule": [
+                                {
+                                    "subdescription": "The name is the property you want to set. For example, the paragraph <p> element in the example carries an attribute whose name is align, which you can use to indicate the alignment of paragraph on the page."
+                                },
+                                {
+                                    "subdescription": "The value is what you want the value of the property to be set and always put within quotations. The below example shows three possible values of align attribute: left, center and right."
+                                }
+                            ]
+                        },
+                        {
+                            "description": "Example",
+                            "codesnippet": "<!DOCTYPE html> \n<html>\n   <head>\n      <title>Align Attribute  Example</title>\n   </head>\n   <body>\n      <p align = 'left'>This is left aligned</p>\n      <p align = 'center'>This is center aligned</p>\n      <p align = 'right'>This is right aligned</p>\n   </body>\n</html>"
+                        },
+                        {
+                            "title": "Core Attributes",
+                            "description": "The four core attributes that can be used on the majority of HTML elements (although not all) are −",
+                            "subModule": [
+                                {
+                                    "subdescription": "Id"
+                                },
+                                {
+                                    "subdescription": "Title"
+                                },
+                                {
+                                    "subdescription": "Class"
+                                },
+                                {
+                                    "subdescription": "Style"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "The Id Attribute",
+                            "description": "The id attribute of an HTML tag can be used to uniquely identify any element within an HTML page. There are two primary reasons that you might want to use an id attribute on an element −",
+                            "codesnippet": "<p id = 'html'>This para explains what is HTML</p>\n<p id = 'css'>This para explains what is Cascading Style Sheet</p>",
+                            "subModule": [
+                                {
+                                    "subdescription": "If an element carries an id attribute as a unique identifier, it is possible to identify just that element and its content."
+                                },
+                                {
+                                    "subdescription": "If you have two elements of the same name within a Web page (or style sheet), you can use the id attribute to distinguish between elements that have the same name."
+                                }
+                            ]
+                        },
+                        {
+                            "title": "The title Attribute",
+                            "description": "The title attribute gives a suggested title for the element. They syntax for the title attribute is similar as explained for id attribute −\n The behavior of this attribute will depend upon the element that carries it, although it is often displayed as a tooltip when cursor comes over the element or while the element is loading.",
+                            "codesnippet": "<!DOCTYPE html>\n<html>\n   <head>\n      <title>The title Attribute Example</title>\n   </head>\n   <body>\n      <h3 title = 'Hello HTML!'>Titled Heading Tag Example</h3>\n   </body>\n</html>"
+                        },
+                        {
+                            "title": "The class Attribute",
+                            "description": "The class attribute is used to associate an element with a style sheet, and specifies the class of element. You will learn more about the use of the class attribute when you will learn Cascading Style Sheet (CSS). So for now you can avoid it.\n The value of the attribute may also be a space-separated list of class names. For example −",
+                            "codesnippet": "class = 'className1 className2 className3'"
+                        },
+                        {
+                            "title": "The style Attribute",
+                            "description": "The style attribute allows you to specify Cascading Style Sheet (CSS) rules within the element.",
+                            "codesnippet": "<!DOCTYPE html>\n<html> \n   <head>\n      <title>The style Attribute</title>\n   </head>\n   <body>\n      <p style = 'font-family:arial; color:#FF0000;'>Some text...</p>\n   </body>\n</html>"
+                        }
+                        
+                    ]
+                   }
+               ]
+           }
+        ]
+    }
+]

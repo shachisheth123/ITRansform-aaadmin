@@ -1,0 +1,44 @@
+<h5>course progress {{progress}}% </h5>
+<mat-progress-bar mode="determinate" value="{{progress}}" class="progress-bar"></mat-progress-bar>
+<div class="row modulebox">
+  <div class="col-sm-12">
+    <div *ngIf="modules" class="modules">
+      <h5 class="module-name">{{module.moduleName}}</h5>
+      <ul *ngFor="let mod of module.moduleDetails; let i=index;" class="modulelist">
+        <li>
+          <h5 class="module-title">{{mod.title}}</h5>
+        </li>
+        <li>{{mod.description}}</li>
+        <li *ngIf="mod.moduleImage" class="moduleImage">
+          <img src="{{mod.moduleImage}}" alt="">
+        </li>
+        <li *ngIf="mod.codesnippet">
+          <textarea highlight-js [lang]="'java'" [ngModel]="java">
+                  {{mod.codesnippet}}
+                </textarea>
+        </li>
+        <li *ngIf="module.moduleDetails[i].subModule">
+          <ul *ngFor="let submod of module.moduleDetails[i].subModule">
+            <li *ngIf="submod.subtitle">{{submod.subtitle}}</li>
+            <li *ngIf="submod.subdescription" class="subdescription">{{submod.subdescription}}</li>
+          </ul>
+        </li>
+        <li *ngIf="mod.youtubelink" class="youtubelink">
+          <iframe [src]="mod.youtubelink | safe" width="420" height="345"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <nav aria-label="..." class="next-prev">
+    <ul class="pagination">
+      <li class="page-item nav-prev">
+        <a class="page-link" (click)="previous()">Previous</a>
+      </li>
+
+      <li class="page-item nav-next">
+        <a class="page-link" routerLinkActive="one" (click)="next()">Next</a>
+      </li>
+    </ul>
+  </nav>
+</div>
